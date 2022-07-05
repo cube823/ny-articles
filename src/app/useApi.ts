@@ -21,7 +21,6 @@ export const articleApi = createApi({
         const headlineQuery = headline ? `headline:(${headline})` : ''
         const glocationsQuery = glocations?.length ? `glocations:("${glocations.join('" "')}")` : ''
         const dateQuery = date ? `&begin_date=${date}&end_date=${date}` : ''
-        //&begin_date=${date}&end_date=${date}
         const and = headlineQuery && glocationsQuery ? ' AND ' : ''
 
         const pageQuery = page ? `&page=${page}` : ''

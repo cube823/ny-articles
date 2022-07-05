@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import EmptyPage from 'src/app/Scrape/EmptyPage'
 import FlexBase from 'src/components/Cores/FlexBase'
 import Layout from 'src/components/Layout'

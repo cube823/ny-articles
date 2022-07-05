@@ -1,8 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-// const date = new Date()
-// date.toLocaleDateString()
-
 interface DateState {
   date: string
 }

@@ -1,7 +1,7 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import FlexBase from 'src/components/Cores/FlexBase'
 import FooterItem from 'src/components/Layout/Footer/FooterItem'
-import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
