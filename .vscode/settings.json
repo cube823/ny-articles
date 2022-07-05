@@ -6,14 +6,12 @@
     },
       // Enable per-language
     "[typescript]": {
-      // "editor.formatOnSave": true,
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
-      // "editor.formatOnSave": true,
     },  
-    "workbench.settings.useSplitJSON": true, // 요거 넣어줘야 설정이 merge된대요.
+    "workbench.settings.useSplitJSON": true,
     "window.zoomLevel": 3,
     "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
     "editor.fontLigatures": true
