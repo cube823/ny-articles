@@ -6,7 +6,7 @@ import Layout from 'src/components/Layout'
 import PostList from 'src/components/Layout/PostList'
 import { addList, initializeList } from 'src/features/entireListSlice'
 
-// import LoadingIndicator from 'src/components/Cores/LoadingIndicator'
+import LoadingIndicator from 'src/components/Cores/LoadingIndicator'
 
 const Home = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -18,7 +18,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState<number>(0)
   const [loading, setLoading] = useState<boolean>(true)
 
-  const { data, isFetching } = useGetArticleByQueriesQuery({
+  const { data, isFetching, isLoading } = useGetArticleByQueriesQuery({
     headline,
     date,
     glocations: glocations.map((g) => g.value),
@@ -59,6 +59,7 @@ const Home = () => {
       {entireList.length
         ? entireList.map((data, index) => <PostList data={data} key={`articles_${index}`} />)
         : undefined}
+      {loading || isLoading || isFetching ? <LoadingIndicator /> : undefined}
     </Layout>
   )
 }

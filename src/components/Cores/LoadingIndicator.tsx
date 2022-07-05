@@ -1,18 +1,21 @@
-import React from 'react'
 import FlexBase from 'src/components/Cores/FlexBase'
 import styled from 'styled-components'
 
 const LoadingIndicator = () => {
-  return <LoadingIndicatorContainer />
+  return (
+    <MainContainer>
+      <LoadingIndicatorContainer />
+    </MainContainer>
+  )
 }
 
 const LoadingIndicatorContainer = styled(FlexBase)`
   @keyframes spin {
     from {
-      transform: 'rotate(0deg);
+      transform: rotate(0deg);
     }
     to {
-      transform: 'rotate(360deg);
+      transform: rotate(360deg);
     }
   }
 
@@ -21,10 +24,18 @@ const LoadingIndicatorContainer = styled(FlexBase)`
 
   border-radius: 50%;
   border-style: solid;
+  border-top-color: ${(props) => props.theme.pallette.blueMain};
   border-left-color: ${(props) => props.theme.pallette.blueSky};
-  border-right-color:  ${(props) => props.theme.pallette.blueSky};
-  border-bottom-color: ' ${(props) => props.theme.pallette.blueSky};
-  border-width: 4px;
+  border-right-color: ${(props) => props.theme.pallette.blueSky};
+  border-bottom-color: ${(props) => props.theme.pallette.blueSky};
+  border-width: 20px;
+`
+
+const MainContainer = styled(FlexBase)`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 `
 
 export default LoadingIndicator
