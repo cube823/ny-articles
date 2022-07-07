@@ -131,7 +131,7 @@ const PostItemTopContainer = styled(FlexBase)`
 `
 
 const HeadlineContainer = styled(FlexBase)`
-  flex: 1;
+  max-width: calc(100% - 35px);
   letter-spacing: -0.05em;
 `
 
