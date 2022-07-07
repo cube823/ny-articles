@@ -26,9 +26,12 @@ const TextBase = ({ fontSize, lineHeight, color, fontWeight, text }: TextBasePro
 }
 
 const TextBaseContainer = styled.div<TextCssProps>`
-  display: flex;
   line-height: 100%;
   font-family: inherit;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   font-size: ${(props) => props.fontSize}px;
   font-weight: ${(props) => props.fontWeight};

@@ -89,7 +89,7 @@ const HeaderItemContainer = styled(FlexBase)<{ hasValue: boolean }>`
   padding: 0 12px;
   gap: 4px;
   cursor: pointer;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   overflow: hidden;
